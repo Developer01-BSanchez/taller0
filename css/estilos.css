@@ -60,3 +60,49 @@ body{
     .menu i{
         margin-right: 0.5rem;
     }
+
+    /*Sección Features*/
+    #features{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(../img/index/bg-features.png);
+        padding-top: 1rem;
+        color: var(--blanco);
+    }
+    .features-description{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .features-title{
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        text-align: center;
+        font-size: 2em;
+        padding: 0.5em 0;
+    }
+    .feature{
+        width: 25%;
+        min-width: 180px;
+        max-width: 230px;
+        margin: 0.8rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+    .feature i{
+        font-size: 2.2em;
+        margin-bottom: 1.5rem;
+    }
+    .feature-blue{
+        background-color: #00325eae;
+    }
+     
+    .feature-black{
+        background-color: rgba(0,0,0,0.59);
+    }
