@@ -45,6 +45,10 @@ body{
     }
     .logo img{
         height: 3rem;
+    }
+    .logo-vertical-negro img{
+        height: 10rem;
+        flex-basis: 30%;
     }    
     .menu a{
         color: var(--blanco);
