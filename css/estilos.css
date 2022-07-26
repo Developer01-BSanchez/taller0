@@ -24,89 +24,122 @@ body{
   h1,h2,h3,h4,h5{
     font-family: 'Marcellus', serif;
 }
+/*Mobile first*/
+nav{
+    display: flex;
+    flex-direction: column;
+}
 
-    /* Barra de navegación*/
+.logo{
+    background-color: var(--negro2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
 
+.logo img{
+    width: 40%;
+    max-width: 200px;
+}
+
+.menu{
+    background-color: rgba(1, 10, 52, 0.838);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.menu hr{
+    width: 90%;
+    background-color: var(--blanco);
+}
+.item{
+    padding: 1rem;
+}
+
+.logo i{
+    color: var(--blanco);
+    font-size: 2rem;
+}
+
+nav a{
+    color: var(--blanco);
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Marcellus', serif;
+    color: var(--blanco);
+    font-size: 1.3rem;
+}
+
+nav a:hover{
+    background-color: #0B3860;
+    width: 100%;
+    transition: all ls ease-in-out, height 1ms;
+}
+
+.navbar-button{
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    font-family: 'Marcellus', serif;
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+/*Resolucion tablet*/
+@media screen and (min-width: 768px){
+
+}
+
+/*Resolución notebooks*/
+@media screen and (min-width: 1024px){
+      
     nav{
         display: flex;
+        flex-direction: row; /*cambiamos la disposición de los elementos*/
+        width: 100%;
+        justify-content: space-between;
+        background-color: var(--negro2);
+    }
+    .logo{
+        padding: 1rem;
+    }
+    .logo img{
+        width: 100%;
+        max-width: 180px;       
+    }
+    .logo i{ /*ocultamos el ícono bars del menú hamburguesa*/
+        display: none;
+    } 
+    .menu{
+        background-color: var(--negro2);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .menu-hr{ /*ocultamos la barra de división*/
+        display: none;
+    }
+    .navbar-button{
+        background-color:var(--azuloscuro);
+    }       
+}
+
+/*Resolución notebooks*/
+@media screen and (min-width: 1308px){
+    nav{
+        display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
         background-color: var(--negro2);
-        font-family: 'Marcellus', serif;
-        font-size: 1.3em;
-        padding: 1rem;
-    }
-    .item{
-        padding: 1rem;
-    }
-    nav a{
-        color: var(--blanco);
-        text-decoration: none;
     }
     .logo img{
-        height: 3rem;
-    }
-    .logo-vertical-negro img{
-        height: 10rem;
-        flex-basis: 30%;
-    }    
-    .menu a{
-        color: var(--blanco);
-        text-decoration: none;
-    }
-    .navbar-button{
-        background-color: var(--azuloscuro);
-        padding: 0.5rem 1.5rem;
-        border-radius: 5px;
-        font-family: 'Marcellus', serif;
-        color: var(--blanco);
-    }
-    .menu i{
-        margin-right: 0.5rem;
-    }
-
-    /*Sección Features*/
-    #features{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-image: url(../img/index/bg-features.png);
-        padding-top: 1rem;
-        color: var(--blanco);
-    }
-    .features-description{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .features-title{
-        background-color: rgba(0, 0, 0, 0.5);
         width: 100%;
-        text-align: center;
-        font-size: 2em;
-        padding: 0.5em 0;
     }
-    .feature{
-        width: 25%;
-        min-width: 180px;
-        max-width: 230px;
-        margin: 0.8rem;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-    }
-    .feature i{
-        font-size: 2.2em;
-        margin-bottom: 1.5rem;
-    }
-    .feature-blue{
-        background-color: #00325eae;
-    }
-     
-    .feature-black{
-        background-color: rgba(0,0,0,0.59);
-    }
+    
+}
