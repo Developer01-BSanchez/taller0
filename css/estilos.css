@@ -89,7 +89,13 @@ nav a:hover{
     color: var(--blanco);
     cursor: pointer;
 }
-
+#banner{
+    background-image: url(../img/index/slide1.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-top: 0px;
+    height: 400px;
+}
 /*Resolucion tablet*/
 @media screen and (min-width: 768px){
 
