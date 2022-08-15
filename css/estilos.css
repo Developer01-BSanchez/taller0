@@ -173,9 +173,9 @@ nav a:hover{
 }
  
 .feature-black{
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.555);
 }
-.logo-vertical-negro{
+.features-description img{
     display: none;
 }
 #ubicacion{
@@ -192,13 +192,13 @@ nav a:hover{
     position: relative;
     width: 95%;
     overflow: hidden;
-    padding-top: 100%;
+    padding-top: 60%;
 }
 .ubicanos iframe{
     position: absolute;
     top: 0.3rem;
     bottom: 0.3rem;
-    width: 100%;
+    width: 99%;
     border: none;
     height: 450px;
 }
@@ -348,7 +348,21 @@ footer hr{
 
 /*Resolucion tablet*/
 @media screen and (min-width: 768px){
+    .feature{
+        width: 20%;
+        min-width: 200px;
+        max-width: 250px;
+    }
 
+    .map{
+        position: relative;
+        width: 95%;
+        overflow: hidden;
+        padding-top: 90%;
+    }
+    .ubicanos{
+        padding-top: 60%;
+    }
 }
 
 /*Resolución notebooks*/
@@ -383,6 +397,10 @@ footer hr{
     .navbar-button{
         background-color:var(--azuloscuro);
     }
+    nav a:hover{
+        background-color: var(--azuloscuro);
+        width: auto;   
+    }  
     #banner{
         background-image: url(../img/index/slide1.jpg);
         background-size: cover;
@@ -390,19 +408,169 @@ footer hr{
         margin-top: 0px;
         height: 400px;
     }      
+    .ubicanos{
+        padding-top: 45%;
+    }
+    .p{
+        
+    }
+    .features-description{
+        margin-top: 10px;
+    }
+    .features-description p{
+        width: 90%;
+        margin-top: 10px;
+    }
+    .features-description img{
+        width: 30%;
+        height: 150px;
+        display: block;
+    }
 }
 
-/*Resolución notebooks*/
-@media screen and (min-width: 1308px){
+/*Resolución Desktop*/
+@media screen and (min-width: 1328px){
     nav{
-    display: flex;
-           flex-direction: row;
-    align-items: center;
+        display: flex;
+        flex-direction: row; 
+        width: 100%;
         justify-content: space-between;
         background-color: var(--negro2);
     }
+    .logo{
+        padding: 1rem;
+    }
     .logo img{
         width: 100%;
+        max-width: 180px;       
+    }
+    .logo i{ 
+        display: none;
+    } 
+    .menu{
+        background-color: var(--negro2);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .menu-hr{ 
+        display: none;
+    }
+    .navbar-button{
+        background-color:var(--azuloscuro);
+    }    
+    nav a:hover{
+        background-color: var(--azuloscuro);
+        width: auto;   
+    }  
+
+    .feature{
+        min-width: 200px;
+        max-width: 150px;
+        margin: 2rem;
+        padding: 1rem;
+    }
+    .map{
+        position: relative;
+        width: 95%;
+        overflow: hidden;
+        padding-top: 38%;
     }
     
+    .map iframe{
+        position: absolute;
+        top: 0.3rem;
+        bottom: 0.3rem;
+        width: 100%;
+        border: none;
+        height: 350px;
+    
+    }
+    .feature-title{
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 96.5%;
+        text-align: center;
+        align-items: center;
+        font-size: 1.5em;
+        padding: 1rem;
+        margin: 0 2rem;
+    
+    }
+    .logo-vertical{
+        display: block;
+    }
+
+    .descripcion p{
+        width: 40%;
+    }
+    .descripcion{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .txt{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #descripcion {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 3rem;
+    }
+    
+    #descripcion img{
+        width: 30%;
+        height: 180px;
+        display: block;
+    }
+    
+    #descripcion p{
+        width: 70%;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    .desc{
+        width: 40%;
+    }
+
+    .ubi{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+    .politic{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 20%;
+    }
+    footer hr{
+        display: none;
+    }
+
+    .red{
+        display: block;
+        padding: 0 1rem 1rem 1.5rem;
+        background-color: var(--negro2);
+        color: var(--blanco);
+    }
+
+    .fondo{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        height: 350px;
+        background-image: url(../IMG/index/slide1.jpg);
+        background-size: cover;
+        background-position: 50% 50%;
+        min-height: 450px;
+    }
 }
