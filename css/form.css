@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+  --azulclaro: #48D6ED;
+  --azuloscuro: #337AB7;
+  --azulnegro: #303342;
+  --negro: #333333;
+  --negro2: #000;
+  --gris: #B2B3B3;
+  --fondo: #FFFEFC;
+  --verdeazul: #157A8A;
+  --Magenta: #9C2759;
+  --blanco: #fff;
+  --degradado: linear-gradient(49.54deg, #337AB7 2.89%, #0B3860 80.34%);
+}
+ 
+*{
+    margin:0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+ 
+  h1,h2,h3,h4,h5{
+    font-family: 'Marcellus', serif;
+}
+
+/*Mobile First*/
+#grid-container{
+    display: grid;
+    height: 100%;
+    grid-template-areas: 
+    "head"
+    "data";
+    background-image: url(../IMG/index/slide1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header{
+    display: grid;
+    grid-area: head;
+    width: 100%;
+    justify-self: center;
+    background-color: rgba(59, 73, 141, 0.838);
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+header img{
+    width: 50%;
+    justify-self: center;
+}
+
+ header h1{
+    width: 100%;
+    color: var(--blanco);
+    margin-top: 0.5rem;
+}
+
+#nameUser, #emailUser{
+    display: none;
+}
+
+h1{
+    text-align: center;
+    font-size: 2rem;
+}
+
+section{
+    grid-area: data;
+    justify-self: center;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    
+    
+}
+
+.box{
+    grid-area: box;
+    display:grid;
+    padding: 1rem 2rem;
+    background-color:  rgba(214, 216, 226, 0.838);
+    justify-self: center;
+    align-self: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    width: 76%;
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 1.3rem;
+    border: none;
+    margin-bottom: 1rem;
+
+    box-shadow: 0px 2px 1px var(--negro);
+}
+
+.input-box input[type="date"]{
+    height: 1.5rem;
+}
+
+.input-box input[type="checkbox"]{
+    width: 5%;
+    box-shadow: none;
+}
+
+.input-box input[type="file"]{
+    width: 100%;
+    box-shadow: none;
+}
+
+.confirmar{
+    margin-left: 10%;
+}
+
+.button-box{
+    display: grid;
+    grid-area: button;
+    width: 100%;
+}
+
+.button-box button{
+    width: 50%;
+    height: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--blanco);
+    background-color: var(--negro2);
+    justify-self: center;
+}
+
+.foto input{
+    height: 1.5rem;
+}
+
+.genero{
+    display: grid;
+    grid-area: genero;
+    grid-template-areas: 
+    "mujer m hombre h otro o";
+    align-self: center;
+    width: 80%;
+
+}
+
+#Hombre{
+    display: grid;
+    grid-area: hombre;
+    width: 100%;
+    margin-top: 1rem;
+    
+}
+#Mujer{
+    display: grid;
+    grid-area: mujer;
+    width: 100%;
+    margin-top: 1rem;
+}
+#Otro{
+    display: grid;
+    grid-area: otro;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+#h{
+    display: grid;
+    grid-area: h;
+    margin-top: 1rem;
+    margin-left: 0.2rem;
+}
+
+#m{
+    display: grid;
+    grid-area: m;
+    margin-top: 1rem;
+    margin-left: 0.2rem;
+}
+
+#o{
+    display: grid;
+    grid-area: o;
+    margin-top: 1rem;
+    margin-left: 0.2rem;
+}
+
+.input-box .genero input{
+    width: 10%;
+    color: var(--azuloscuro);
+    padding: 0;
+    box-shadow: none;
+}
+
+.input-box .genero label{
+    margin-bottom: 1rem;
+}
+
+.input-box label{
+    color: var(--negro2);
+    font-size: 1.2rem;
+}
+
+#tipodoc{
+    display: grid;
+    grid-area: tipodoc;
+    width: 100.2%;
+    height: 1.7rem;
+    margin-bottom: 1rem;
+    border: none;
+    box-shadow: 0px 2px 1px var(--negro);
+}
+
+
+
+.logo{
+    grid-area: logo;
+    display: grid;
+    grid-template-areas: 
+    "logo"
+    "menus";
+    height: 20%;
+    background-color: var(--azuloscuro);
+    background-image: url(../IMG/opinion/Vector-opinion.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 150% 180px;
+   
+}
+
+.logo img{
+    width: 80%;
+    margin-top: 2rem;
+    justify-self: center;
+    border-radius: 5px;
+}
+
+.menu{
+    grid-area: menus;
+    display: grid;
+    grid-template-areas: 
+    "uno"
+    "dos"
+    "tres"
+    "cuatro"
+    "cinco";
+    margin-top: 4rem;
+
+}
+
+.box .account img{
+    width: 80%;
+    height: auto;
+    justify-self: center;
+    margin: 1rem 0 0.5rem 0;
+}
+
+#img2{
+    display: none;
+}
+
+.ico{
+    background-color: var(--azuloscuro);
+    text-align: center;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    font-size: 1.7rem;
+    color: var(--blanco);
+    margin-bottom: 1rem;
+}
+
+.fa-file-arrow-up{
+    display: none;
+}
+
+.account{
+    display: grid;
+    justify-self: center;
+}
+
+#op1{
+    grid-area: uno;
+    color: var(--blanco);
+    font-size: 1.3rem;
+    justify-self: center;
+    margin: 0 0 0.5rem 0;
+}
+
+#op2{
+    grid-area: dos;
+    color: var(--blanco);
+    font-size: 1.3rem;
+    justify-self: center;
+    margin: 0 0 0.5rem 0;
+}
+
+#op3{
+    grid-area: tres;
+    color: var(--blanco);
+    font-size: 1.3rem;
+    justify-self: center;
+    margin: 0 0 0.5rem 0;
+}
+
+#op4{
+    grid-area: cuatro;
+    color: var(--blanco);
+    font-size: 1.3rem;
+    justify-self: center;
+    margin: 0 0 0.5rem 0;
+}
+
+#op5{
+    grid-area: cinco;
+    color: var(--blanco);
+    font-size: 1.3rem;
+    justify-self: center;
+    margin-top: 15em;
+}
+
+.Cambiar{
+    display: none;
+}
+
+.user{
+    grid-area: user;
+}
+
+/*Resolucion Notebooks*/
+@media screen and (min-width:1024px) {
+    #grid-container{
+        display: grid;
+        height: 100%;
+        grid-template-columns: 30% 70% ;
+        grid-template-areas: 
+        "head data";
+    }
+
+    header{
+        display: grid;
+        grid-area: head;
+        width: 100%;
+        justify-self: center;
+        background-color: rgba(59, 73, 141, 0.838);
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    
+    }
+
+    header img{
+        width: 80%;
+        height: 50%;
+        justify-self: center;
+        align-self: end;
+        margin-bottom: 0;
+    }
+    
+     header h1{
+        width: 95%;
+        color: var(--blanco);
+        margin-top: 0.5rem;
+        align-self: start;
+    }
+
+    .box{
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+        "title title"
+        "documento ndocumento"
+        "nombre apellido"
+        "fecha pais"
+        "Gen telefono"
+        "email foto"
+        "contra cacontra"
+        "confirmacion confirmacion"
+        "btn2 btn2";
+        width: 85%;
+        
+    }
+
+    .title{
+        display: grid;
+        grid-area: title;
+        margin-bottom: 1rem;
+    }
+
+    .documento{
+        display: grid;
+        grid-area: documento;
+        width: 95%;
+    }
+
+    .ndocumento{
+        display: grid;
+        grid-area: ndocumento;
+        width: 95%;
+    }
+
+    .nombre{
+        display: grid;
+        grid-area: nombre;
+        width: 95%;
+    }
+
+    .apellido{
+        display: grid;
+        grid-area: apellido;
+        width: 95%;
+    }
+
+    .fecha{
+        display: grid;
+        grid-area: fecha;
+        width: 95%;
+    }
+
+    .pais{
+        display: grid;
+        grid-area: pais;
+        width: 95%;
+    }
+
+    .Gen{
+        display: grid;
+        grid-area: Gen;
+        width: 95%;
+    }
+
+    .telefono{
+        display: grid;
+        grid-area: telefono;
+        width: 95%;
+    }
+
+    .email{
+        display: grid;
+        grid-area: email;
+        width: 95%;
+    }
+
+    .btn2{
+        display: grid;
+        grid-area: btn2;
+        width: 80%;
+    }
+
+
+    .contra{
+        display: grid;
+        grid-area: contra;
+        width: 95%;
+    }
+
+    .cacontra{
+        display: grid;
+        grid-area: cacontra;
+        width: 95%;
+    }
+
+    .ico{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-area: ico;
+        grid-template-areas: 
+        "i1 i2";
+    }
+
+    .foto{
+        display: grid;
+        grid-area: foto;
+    }
+
+    .confirmar{
+        display: grid;
+        grid-area: confirmacion;
+        justify-self: center;
+        width: 100%;
+        margin-left: 50%;
+    }
+    
+    .menu i{
+        text-align: start;
+    }
+
+    .ico{
+        margin-left: 0;
+        padding-bottom: 0;
+        width: 80%;
+        height: 80%;
+    }
+
+    .ico i{
+        align-self: center;
+    }
+
+    .fa-file-arrow-up{
+        display: block;
+    }
+
+    .box .account img{
+        width: 80%;
+        height: auto;
+        margin-top: 0;
+        justify-self: start;
+    }
+
+    .box .account .ico{
+        justify-content: end;
+        margin-right: 5rem;
+        padding: 0;
+    }
+
+    .box .button-box button{
+        display: grid;
+        justify-self: start;
+        margin-left: 0;
+    }
+
+    #nameUser, #emailUser{
+        display: block;
+        color: var(--blanco);
+        justify-self: end;
+        padding: 0 1rem;
+    }
+
+    #img2{
+        display: block;
+        width: 80%;
+        justify-self: center;
+    }
+
+    #img1, #img3{
+        display: none;
+    }    
+
+    #op1{
+        justify-self: start;
+        padding: 0 1rem;
+        width: 100%;
+    }
+    #op2{
+        justify-self: start;
+        padding: 0 1rem;
+        width: 100%;
+    }
+    #op3{
+        justify-self: start;
+        padding: 0 1rem;
+        width: 100%;
+
+    }
+    #op4{
+        justify-self: start;
+        padding: 0 1rem;
+        width: 100%;
+    }
+    #op5{
+        justify-self: end;
+        align-self: end;
+        padding: 0 1rem;
+        margin-bottom: 0;
+        margin-top: 25%;
+        background-color:  rgba(74, 75, 78, 0.838)
+
+    }
+
+    .Cambiar{
+        display: block;
+    }
+
+    .Cambiar button{
+        background-color: var(--negro2);
+        color: var(--blanco);
+        font-size: 1.5rem;
+        margin-right: 2.5rem;
+        padding: 1rem;
+    }
+
+}

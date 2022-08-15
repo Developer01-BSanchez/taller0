@@ -24,6 +24,7 @@ body{
   h1,h2,h3,h4,h5{
     font-family: 'Marcellus', serif;
 }
+/*Mobile First*/
 
 #grid-container{
     display: grid;
@@ -317,7 +318,7 @@ section{
 .user{
     grid-area: user;
 }
-
+/*Resolucion Notebooks*/
 @media screen and (min-width:1024px) {
 
 
