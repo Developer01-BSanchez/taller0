@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+  --azulclaro: #48D6ED;
+  --azuloscuro: #337AB7;
+  --azulnegro: #303342;
+  --negro: #333333;
+  --negro2: #000;
+  --gris: #B2B3B3;
+  --fondo: #FFFEFC;
+  --verdeazul: #157A8A;
+  --Magenta: #b11a5b;
+  --blanco: #fff;
+  --degradado: linear-gradient(49.54deg, #337AB7 2.89%, #0B3860 80.34%);
+}
+ 
+*{
+    margin:0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    
+}
+ 
+  h1,h2,h3,h4,h5{
+    font-family: 'Marcellus', serif;
+}
+
+/*Mobile first*/
+.login{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/login/bg-login.png);
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin: 0 2em 1em 2em;
+}
+
+.button-box{
+    display: flex;
+    flex-direction: column;
+    margin: 3em 2em 0 2em;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.opciones{
+    display: none;
+    flex-direction: row;
+    margin: 1rem 3em;
+}
+
+.opciones a{
+    text-decoration: none;
+    color: var(--negro2);
+}
+
+.opciones p{
+    color: var(--blanco);
+}
+.login .icono{
+    font-size: 3rem;
+    display: block;
+    background-color: var(--Magenta);
+    color: var(--blanco);
+    padding: 1rem;
+    border-radius: 100%;
+    width: 14%;
+    text-align: center;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.button-box input{
+    height: 2.5rem;
+    color: var(--blanco);
+    background-color: var(--negro2);
+    border-radius: 5px;
+    border-color: var(--negro2);
+    font-size: 1.5rem;
+    padding:0;
+    font-family: 'Marcellus' serif;
+    border: none;
+}
+
+.input-box input{
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.input-box label{
+    color: var(--blanco);
+    font-size: 1.3rem;
+}
+
+.login .box{
+    min-width: 400px;
+    min-height: 500px;
+    background-color:  rgba(73, 130, 168, 0.838);
+    background-image: url(../img/login/vector-login.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    padding: 1rem 2rem;
+}
+
+.login .box .logo img{
+    width: 45%;
+    display: flex;
+    justify-items: flex-end;
+}
+
+/*Resolución notebooks*/
+@media screen and (min-width: 1024px) {
+    .login .ico{
+        width: 12%;
+    }
+    .opciones{
+        display: block;
+        flex-direction: row;
+        margin: 2rem;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .login .box{
+        min-width: 450px;
+        min-height: 550px;
+    }
+    
+}
