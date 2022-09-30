@@ -19,6 +19,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    background-color: var(--negro);
 }
  
   h1,h2,h3,h4,h5{
@@ -32,7 +33,7 @@ body{
     grid-template-areas: 
     "head"
     "data";
-    background-image: url(../IMG/index/slide1.jpg);
+    background-image: url(../IMG/index/slide2.png);
     background-size: cover;
     background-repeat: no-repeat;
 }

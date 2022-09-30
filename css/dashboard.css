@@ -19,12 +19,12 @@
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    background-color:var(--negro);
 }
  
   h1,h2,h3,h4,h5{
     font-family: 'Marcellus', serif;
 }
-/*Mobile First*/
 
 #grid-container{
     display: grid;
@@ -36,7 +36,7 @@ body{
 
 nav{
     grid-area: nav;
-    background-color: var(--negro);
+    background-color: var(--azulnegro);
     padding: 0 0 2rem 0;
 
     
@@ -234,41 +234,29 @@ section{
 }
 
 .box .account img{
-    width: 50%;
+    width: 80%;
     height: auto;
     justify-self: center;
     margin: 1rem 0 0.5rem 0;
 }
 
-.ico{
-    display: grid;
-    grid-template-areas: 
-    "1 2";
-    justify-content: center;
-    background-color: var(--azuloscuro);
-    width: 50%;
-    margin-left: 5.3rem;
-    margin-bottom: 2rem;
-    
-}
-
-#i1{
-    display: grid;
-    grid-area: i1;
-    
-}
-#i2{
-    display: grid;
-    grid-area: i2;
+#img2{
     display: none;
 }
 
-.ico i{
-    font-size: 1.5rem;
+.ico{
+    background-color: var(--azuloscuro);
+    text-align: center;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    font-size: 1.7rem;
     color: var(--blanco);
-    padding: 0.5rem 3.5rem 0.5rem 3.5rem;
+    margin-bottom: 1rem;
 }
 
+.fa-file-arrow-up{
+    display: none;
+}
 
 .account{
     display: grid;
@@ -279,7 +267,7 @@ section{
     grid-area: uno;
     color: var(--blanco);
     font-size: 1.3rem;
-    text-align: center;
+    justify-self: center;
     margin: 0 0 0.5rem 0;
 }
 
@@ -287,7 +275,7 @@ section{
     grid-area: dos;
     color: var(--blanco);
     font-size: 1.3rem;
-    text-align: center;
+    justify-self: center;
     margin: 0 0 0.5rem 0;
 }
 
@@ -295,7 +283,7 @@ section{
     grid-area: tres;
     color: var(--blanco);
     font-size: 1.3rem;
-    text-align: center;
+    justify-self: center;
     margin: 0 0 0.5rem 0;
 }
 
@@ -303,7 +291,7 @@ section{
     grid-area: cuatro;
     color: var(--blanco);
     font-size: 1.3rem;
-    text-align: center;
+    justify-self: center;
     margin: 0 0 0.5rem 0;
 }
 
@@ -311,16 +299,290 @@ section{
     grid-area: cinco;
     color: var(--blanco);
     font-size: 1.3rem;
-    text-align: center;
+    justify-self: center;
     margin-top: 15em;
+}
+
+.Cambiar{
+    display: none;
 }
 
 .user{
     grid-area: user;
 }
-/*Resolucion Notebooks*/
+
 @media screen and (min-width:1024px) {
+    #grid-container{
+        display: grid;
+        height: 100%;
+        grid-template-columns: 20% 80% ;
+        grid-template-areas: 
+        "nav data";
+    }
+    .box{
+        grid-template-columns: 20% 40% 40%;
+        grid-template-areas:
+        "title title title"
+        "account documento ndocumento"
+        "account nombre apellido"
+        "account fecha pais"
+        "account Gen telefono"
+        "account email email"
+        "account btn1 btn1"
+        "account contra cacontra"
+        "account btn2 btn2";
+        
+    }
 
+    .title{
+        display: grid;
+        grid-area: title;
+        margin-bottom: 1rem;
+    }
 
+    .account{
+        display: grid;
+        grid-area: account;
+        grid-template-areas: 
+        "foto"
+        "ico";
+        height: 30%;
+    }
+
+    .documento{
+        display: grid;
+        grid-area: documento;
+        width: 95%;
+    }
+
+    .ndocumento{
+        display: grid;
+        grid-area: ndocumento;
+        width: 95%;
+    }
+
+    .nombre{
+        display: grid;
+        grid-area: nombre;
+        width: 95%;
+    }
+
+    .apellido{
+        display: grid;
+        grid-area: apellido;
+        width: 95%;
+    }
+
+    .fecha{
+        display: grid;
+        grid-area: fecha;
+        width: 95%;
+    }
+
+    .pais{
+        display: grid;
+        grid-area: pais;
+        width: 95%;
+    }
+
+    .genero{
+        display: grid;
+        grid-area: Gen;
+        width: 95%;
+    }
+
+    .telefono{
+        display: grid;
+        grid-area: telefono;
+        width: 95%;
+    }
+
+    .email{
+        display: grid;
+        grid-area: email;
+        width: 47.5%;
+    }
+
+    .btn1{
+        display: grid;
+        grid-area: btn1;
+        width: 10%;
+    }
+
+    .btn1 button{
+        width: 220%;
+    }
+
+    .btn2{
+        display: grid;
+        grid-area: btn2;
+        width: 10%;
+    }
+
+    .btn2 button{
+        width: 250%;
+    }
+
+    .contra{
+        display: grid;
+        grid-area: contra;
+        width: 95%;
+    }
+
+    .cacontra{
+        display: grid;
+        grid-area: cacontra;
+        width: 95%;
+    }
+
+    .ico{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-area: ico;
+        grid-template-areas: 
+        "i1 i2";
+    }
+
+    .foto{
+        display: grid;
+        grid-area: foto;
+    }
     
+    .menu i{
+        text-align: start;
+    }
+
+    .ico{
+        margin-left: 0;
+        padding-bottom: 0;
+        width: 80%;
+        height: 80%;
+    }
+
+    .ico i{
+        align-self: center;
+    }
+
+    .fa-file-arrow-up{
+        display: block;
+    }
+
+    .box .account img{
+        width: 80%;
+        height: auto;
+        margin-top: 0;
+        justify-self: start;
+    }
+
+    .box .account .ico{
+        justify-content: end;
+        margin-right: 5rem;
+        padding: 0;
+    }
+
+    .box .button-box button{
+        display: grid;
+        justify-self: start;
+        margin-left: 0;
+    }
+
+    #nameUser, #emailUser{
+        display: block;
+        color: var(--blanco);
+        justify-self: end;
+        padding: 0 1rem;
+    }
+
+    #img2{
+        display: block;
+        width: 80%;
+        justify-self: center;
+    }
+
+    #img1, #img3{
+        display: none;
+    }    
+
+    nav p{
+        display: block;    
+    }
+
+    #op1{
+        justify-self: start;
+        padding: 0 1rem;
+        width: 100%;
+    }
+    #op2{
+        justify-self: start;
+        padding: 0 1rem;
+        width: 100%;
+    }
+    #op3{
+        justify-self: start;
+        padding: 0 1rem;
+        width: 100%;
+
+    }
+    #op4{
+        justify-self: start;
+        padding: 0 1rem;
+        width: 100%;
+    }
+    #op5{
+        justify-self: end;
+        align-self: end;
+        padding: 0 1rem;
+        margin-bottom: 0;
+        margin-top: 25%;
+        background-color:  rgba(74, 75, 78, 0.838)
+
+    }
+
+    .logo{
+        grid-area: logo;
+        display: grid;
+        grid-template-areas: 
+        "logo"
+        "menus";
+        height: 30%;
+        background-color: var(--azuloscuro);
+        background-image: url(../IMG/opinion/Vector-opinion.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: 150% 150px;
+       
+    }
+
+    .item{
+        display: grid;
+        grid-area: item;
+        grid-template-areas: "ico txt";
+        
+    }
+
+    #txt{
+        display: grid;
+        grid-area: txt;
+        margin-left: 0;
+        padding: 1rem 0;
+    }
+
+    #ico{
+        display: grid;
+        grid-area: ico;
+        padding: 1rem 0;
+    }
+
+    .Cambiar{
+        display: block;
+    }
+
+    .Cambiar button{
+        background-color: var(--negro2);
+        color: var(--blanco);
+        font-size: 1.5rem;
+        margin-right: 2.5rem;
+        padding: 1rem;
+    }
+
 }
